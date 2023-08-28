@@ -1,0 +1,6 @@
+Base path: 'C:/Program Files/Unity/Hub/Editor/2021.3.23f1/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2021.3.23f1/Editor/Data/PlaybackEngines'
+Cmd: initializeCompiler
+
+Unhandled exception: ProtocUnhandled exception: Protocol error - failed to read magic number (error -214
+Quitting shader compiler 
+Quitting shader compiler process
