@@ -31,6 +31,18 @@ public class Player : MonoBehaviour
             Die();
     }
 
+    public void IncreaseHealth(int health)
+    {
+        _health += health;
+
+        if(_health > _maxHealth)
+        {
+            _health = _maxHealth;
+        }
+
+        HealthChanged?.Invoke(_health);
+    }
+
     public void Die()
     {
         Died?.Invoke();

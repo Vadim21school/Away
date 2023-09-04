@@ -13,6 +13,7 @@ public class HealthDisplay : MonoBehaviour
     {
         SwitchOff();
     }
+
     private void OnEnable()
     {
         _player.HealthChanged += OnHealthChanged;

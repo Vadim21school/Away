@@ -10,7 +10,7 @@ public class LifeBooster : MonoBehaviour
     {
         if (collision.TryGetComponent(out Player player))
         {
-            player.ApplyDamage(-_amount);
+            player.IncreaseHealth(_amount);
         }
 
         Die();

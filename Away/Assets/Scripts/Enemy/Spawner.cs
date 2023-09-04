@@ -8,24 +8,21 @@ public class Spawner : ObjectPool
     [SerializeField] private Transform[] _spawnPoints;
     [SerializeField] private float _secondsBetweenSpawn;
 
-    private float elapsedTime = 0;
-
     private void Start()
     {
         Initialize(_prefab);
+        StartCoroutine(RunPrefab());
     }
 
-    private void Update()
+    private IEnumerator RunPrefab()
     {
-        elapsedTime += Time.deltaTime;
-        
-        if(elapsedTime >= _secondsBetweenSpawn)
+        while (Time.timeScale > 0)
         {
             if (TryGetObject(out GameObject prefab))
             {
-                elapsedTime = 0;
                 int spawnPointNumber = Random.Range(0, _spawnPoints.Length);
                 SetEnemy(prefab, _spawnPoints[spawnPointNumber].position);
+                yield return new WaitForSeconds(_secondsBetweenSpawn);
             }
         }
     }
