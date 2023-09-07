@@ -352,6 +352,7 @@
 "Assets/Scripts/Bullet/Bullet.cs"
 "Assets/Scripts/Bullet/BulletMover.cs"
 "Assets/Scripts/Bullet/Shoot.cs"
+"Assets/Scripts/Enemy/Class1.cs"
 "Assets/Scripts/Enemy/Enemy.cs"
 "Assets/Scripts/Enemy/EnemyMover.cs"
 "Assets/Scripts/Enemy/ObjectPool.cs"

@@ -7,8 +7,9 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private int _health;
 
-    public event UnityAction<int> HealthChanged;
     private int _maxHealth = 4;
+
+    public event UnityAction<int> HealthChanged;
     public event UnityAction Died;
 
     private void Start()

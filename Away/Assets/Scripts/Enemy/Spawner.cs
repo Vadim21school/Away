@@ -22,8 +22,9 @@ public class Spawner : ObjectPool
             {
                 int spawnPointNumber = Random.Range(0, _spawnPoints.Length);
                 SetEnemy(prefab, _spawnPoints[spawnPointNumber].position);
-                yield return new WaitForSeconds(_secondsBetweenSpawn);
             }
+
+            yield return new WaitForSeconds(_secondsBetweenSpawn);
         }
     }
 
